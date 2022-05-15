@@ -112,19 +112,7 @@ function Menu() {
             Profile
           </div>
         </Link>
-        <button
-          style={{
-            color: "white",
-            backgroundColor: "rgb(29, 161, 242)",
-            width: "55%",
-            marginTop: "20px",
-            marginBottom: "40px",
-            justifyContent: "center",
-          }}
-          className="link--button"
-        >
-          Tweet
-        </button>
+        <button className="tweet--button">Tweet</button>
       </div>
       <div className="bottom--menu">
         <Link to="/" style={{ textDecoration: "none" }}>

@@ -1,5 +1,5 @@
 .header {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.889);
   display: flex;
   gap: 30px;
   color: white;
@@ -11,8 +11,47 @@
 
 .profileTop {
   display: flex;
+  flex-direction: column;
 }
 
 .arrow {
   width: 19px;
+}
+
+.profileInfo {
+  background-color: black;
+  height: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.setupProfile {
+  float: right;
+  margin: 20px;
+  border-radius: 2em;
+  color: white;
+  background-color: black;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bolder;
+  margin-left: 67%;
+  width: 30%;
+}
+
+.profilePic {
+  position: absolute;
+  top: 18%;
+  left: 32%;
+  width: 130px;
+  border-radius: 50%;
+  border: 5px solid black;
+}
+
+.followers {
+  display: flex;
+  justify-content: start;
+  margin-top: 50px;
+  margin-left: 30px;
+  gap: 40px;
 }
