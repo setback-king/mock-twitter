@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import SignIn from "./components/main-components/SignIn";
+import Sidebar from "./components/main-components/Sidebar";
+import Menu from "./components/main-components/Menu";
+import Profile from "./components/main-components/Profile";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "./components/utils/firebase.config";
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Timeline from "./components/main-components/Timeline";
+import News from "./components/main-components/News";
+import Likes from "./components/main-components/Likes";
+import Notifications from "./components/main-components/Notifications";
+import Messages from "./components/main-components/Messages";
 
 function App() {
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="app">
+        {user && <Menu />}
+        <Routes>
+          {!user && <Route path="/" element={<SignIn user={user} />} />}
+          <Route path="/" element={<Timeline user={user} />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/news" element={<News />} />
+          <Route path="profile/likes" element={<Likes />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: "1rem", fontSize: "50px" }}>
+                <p>There's nothing here! Incorrect Link.</p>
+              </main>
+            }
+          />
+        </Routes>
+
+        {user && <Sidebar />}
+      </div>
+    </Router>
   );
 }
 

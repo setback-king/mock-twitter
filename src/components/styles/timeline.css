@@ -1,0 +1,6 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  animation: transitionIn 0.75s;
+}

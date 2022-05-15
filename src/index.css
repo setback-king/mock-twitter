@@ -1,13 +1,64 @@
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+s * {
+  font-family: "Helvetica Neue";
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  height: 100vh;
+  max-width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: auto;
+  max-width: 100%;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  animation: transitionIn 0.75s;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  animation: transitionIn 0.75s;
+}
+
+@media screen and (max-width: 1350px) {
+  .homeImageDiv {
+    display: none;
+  }
+  .home--signIn {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 70px;
+    margin-right: 10%;
+  }
 }

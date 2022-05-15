@@ -1,0 +1,107 @@
+.signIn {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  animation: transitionIn 0.75s;
+}
+
+.signUpForm {
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: left;
+  gap: 35px;
+  border: 2px solid white;
+  border-radius: 1em;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.input {
+  width: 85%;
+  height: 35px;
+  font-size: 20px;
+  color: rgb(29, 161, 242);
+  background-color: black;
+  border: 1px solid gray;
+  align-self: center;
+}
+input:focus {
+  border: 2px solid rgb(29, 161, 242);
+  outline: none;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(29, 161, 242);
+  opacity: 1; /* Firefox */
+}
+
+.home--signIn {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  flex: 1;
+  color: white;
+  background-color: black;
+  padding: 65px 40px;
+  gap: 0.5%;
+}
+
+button.input {
+  color: white;
+  background-color: rgb(29, 161, 242);
+}
+
+.homeImageDiv {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.signIn--button {
+  width: 55%;
+  border-radius: 2em;
+  padding: 12px;
+  border: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+h2 {
+  width: 55%;
+  text-align: center;
+  border-bottom: 1px solid white;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+h2 span {
+  background: black;
+  padding: 0 10px;
+}
+
+.signIn--button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
