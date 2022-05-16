@@ -1,21 +1,36 @@
 .header {
-  background-color: rgba(0, 0, 0, 0.889);
+  background-color: black;
   display: flex;
   gap: 30px;
   color: white;
-  padding: 20px;
   width: 100%;
   font-size: 20px;
   font-weight: bold;
+  height: 60px;
+  align-items: center;
 }
 
 .profileTop {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid rgb(93, 96, 99);
+}
+
+.profileBottom {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  flex: 1;
 }
 
 .arrow {
   width: 19px;
+  margin-top: 3px;
+  margin-left: 20px;
+}
+
+.arrow:hover {
+  cursor: pointer;
 }
 
 .profileInfo {
@@ -35,17 +50,24 @@
   padding: 12px;
   font-size: 15px;
   font-weight: bolder;
-  margin-left: 67%;
-  width: 30%;
+  margin-left: 76%;
+  width: 18%;
+}
+
+.setupProfile:hover {
+  cursor: pointer;
+  background-color: #383535;
 }
 
 .profilePic {
   position: absolute;
   top: 18%;
-  left: 32%;
   width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 5px solid black;
+  margin-left: 25px;
+  object-fit: cover;
 }
 
 .followers {
@@ -54,4 +76,53 @@
   margin-top: 50px;
   margin-left: 30px;
   gap: 40px;
+}
+
+nav {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex: 1;
+  font-size: 18px;
+}
+
+.buttontweet {
+  background-color: black;
+
+  border: none;
+  color: gray;
+  padding: 12px;
+  font-size: 18px;
+  flex: 1;
+}
+
+.buttonlikes {
+  background-color: black;
+  border: none;
+  color: gray;
+  padding: 12px;
+  font-size: 18px;
+  flex: 1;
+}
+
+.selectedButton {
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid rgb(29, 161, 242);
+  border-width: 4px;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.buttontweet:hover {
+  background-color: #383535;
+  color: rgb(65, 66, 69);
+}
+
+.buttonlikes:hover {
+  background-color: #383535;
 }

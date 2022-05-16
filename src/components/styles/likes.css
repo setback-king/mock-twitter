@@ -1,0 +1,8 @@
+.likes {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  animation: transitionIn 0.75s;
+}

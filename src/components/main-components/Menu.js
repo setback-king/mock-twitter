@@ -56,7 +56,7 @@ function Menu() {
               alignItems: "center",
             }}
           >
-            <img src="assets/hashtag.png" style={{ width: "27px" }} alt="" />
+            <img src="./assets/hashtag.png" style={{ width: "27px" }} alt="" />
             Explore
           </div>
         </Link>
@@ -68,7 +68,7 @@ function Menu() {
               alignItems: "center",
             }}
           >
-            <img src="assets/bell.png" style={{ width: "27px" }} alt="" />
+            <img src="./assets/bell.png" style={{ width: "27px" }} alt="" />
             Notifications
           </div>
         </Link>
@@ -80,7 +80,7 @@ function Menu() {
               alignItems: "center",
             }}
           >
-            <img src="assets/email.png" style={{ width: "27px" }} alt="" />
+            <img src="./assets/email.png" style={{ width: "27px" }} alt="" />
             Messages
           </div>
         </Link>
@@ -93,7 +93,7 @@ function Menu() {
             }}
           >
             <img
-              src="assets/bookmark-white.png"
+              src="./assets/bookmark-white.png"
               style={{ width: "27px" }}
               alt=""
             />
@@ -108,7 +108,7 @@ function Menu() {
               alignItems: "center",
             }}
           >
-            <img src="assets/user.png" style={{ width: "27px" }} alt="" />
+            <img src="./assets/user.png" style={{ width: "27px" }} alt="" />
             Profile
           </div>
         </Link>

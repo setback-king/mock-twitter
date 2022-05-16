@@ -11,6 +11,7 @@ import News from "./components/main-components/News";
 import Likes from "./components/main-components/Likes";
 import Notifications from "./components/main-components/Notifications";
 import Messages from "./components/main-components/Messages";
+import { UserTweets } from "./components/main-components/UserTweets";
 
 function App() {
   const [user, setUser] = useState({});
@@ -28,9 +29,12 @@ function App() {
         <Routes>
           {!user && <Route path="/" element={<SignIn user={user} />} />}
           <Route path="/" element={<Timeline user={user} />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile user={user} />}>
+            <Route path="likes" element={<Likes />} />
+            <Route path="/profile" element={<UserTweets />} />
+          </Route>
           <Route path="/news" element={<News />} />
-          <Route path="profile/likes" element={<Likes />} />
+
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/messages" element={<Messages />} />
           <Route
