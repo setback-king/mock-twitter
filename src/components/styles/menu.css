@@ -14,8 +14,15 @@
   animation: transitionIn 0.75s;
 }
 
+.positionContent {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  margin-left: 4%;
+}
+
 .signOut--button {
-  width: 55%;
+  width: 100%;
   border-radius: 2em;
   padding: 12px;
   border: black;
@@ -63,7 +70,7 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
-  width: 55%;
+  width: 100%;
   text-decoration: none;
   background-color: rgb(29, 161, 242);
   margin-top: 20px;

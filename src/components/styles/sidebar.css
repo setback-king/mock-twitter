@@ -1,8 +1,57 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  background-color: black;
+  flex: 0.8;
   animation: transitionIn 0.75s;
-  z-index: 3;
+  align-items: center;
+  background-color: black;
+  padding: 0px 70px 0px 25px;
+  height: 100%;
+}
+
+.input-icons {
+  display: flex;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 40px;
+  background-color: rgb(43, 43, 46);
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(43, 43, 46);
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+
+.input-field:focus {
+  border: 2px solid rgb(25, 140, 211);
+  color: white;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(153, 151, 151);
+  opacity: 1; /* Firefox */
+}
+
+.news {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  background-color: rgb(43, 43, 46);
+  width: 100%;
+  gap: 20px;
+  border-radius: 1em;
+  margin-bottom: 20px;
 }

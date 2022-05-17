@@ -30,7 +30,7 @@ code {
 
 .app {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: auto;
   max-width: 100%;
   position: relative;
