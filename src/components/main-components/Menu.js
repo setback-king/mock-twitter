@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase.config.js";
 import { Link } from "react-router-dom";
 import "../styles/menu.css";
 
 function Menu() {
+  const [createTweet, setCreateTweet] = useState(false);
+
   const logOut = async () => {
     await signOut(auth);
+  };
+
+  const openTweet = () => {
+    setCreateTweet(true);
+  };
+
+  const submitTweet = () => {
+    setCreateTweet(false);
   };
 
   return (
@@ -39,7 +49,7 @@ function Menu() {
               <span className="link--text">Home</span>
             </div>
           </Link>
-          <Link to="/" className="link--button">
+          <Link to="/news" className="link--button">
             <div
               style={{
                 display: "flex",
@@ -79,22 +89,6 @@ function Menu() {
               <span className="link--text">Messages</span>
             </div>
           </Link>
-          <Link to="/" className="link--button">
-            <div
-              style={{
-                display: "flex",
-                gap: "20px",
-                alignItems: "center",
-              }}
-            >
-              <img
-                src="./assets/bookmark-white.png"
-                style={{ width: "27px" }}
-                alt=""
-              />
-              <span className="link--text">Bookmarks</span>
-            </div>
-          </Link>
           <Link className="link--button" to="/profile">
             <div
               style={{
@@ -107,7 +101,9 @@ function Menu() {
               <span className="link--text">Profile</span>
             </div>
           </Link>
-          <button className="tweet--button">Tweet</button>
+          <button onClick={openTweet} className="tweet--button">
+            Tweet
+          </button>
         </div>
         <div className="bottom--menu">
           <Link to="/" style={{ textDecoration: "none" }}>
@@ -117,6 +113,32 @@ function Menu() {
             </button>
           </Link>
         </div>
+        {createTweet && (
+          <div className="tweet--popup">
+            <div className="newTweet">
+              <div className="timeline--image">
+                <img
+                  className="timeline--pic"
+                  src={localStorage.getItem("profilePic")}
+                  alt=""
+                />
+              </div>
+              <div className="tweet--input">
+                <textarea
+                  className="tweet--input"
+                  maxlength="280"
+                  type="text"
+                  rows="3"
+                  placeholder="What's Happening"
+                />
+              </div>
+            </div>
+            <hr />
+            <button onClick={submitTweet} className="timeline--tweet--btn">
+              Tweet
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

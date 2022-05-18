@@ -34,7 +34,6 @@ function App() {
             <Route path="/profile" element={<UserTweets />} />
           </Route>
           <Route path="/news" element={<News />} />
-
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/messages" element={<Messages />} />
           <Route
