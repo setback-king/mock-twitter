@@ -12,17 +12,25 @@
   color: white;
   align-items: justify;
   animation: transitionIn 0.75s;
+  height: 100%;
+}
+
+.bottom--menu {
+  display: flex;
+  flex-direction: column;
 }
 
 .positionContent {
-  position: fixed;
   display: flex;
   flex-direction: column;
-  margin-left: 4%;
+  margin-left: 7%;
+  position: sticky;
+  top: 0;
+  height: 100%;
 }
 
 .signOut--button {
-  width: 100%;
+  width: 50%;
   border-radius: 2em;
   padding: 12px;
   border: black;
@@ -70,7 +78,7 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
-  width: 100%;
+  width: 50%;
   text-decoration: none;
   background-color: rgb(29, 161, 242);
   margin-top: 20px;
@@ -86,4 +94,19 @@
 .link--button:hover {
   background-color: #383535;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+  .link--text {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .menu {
+    flex: 0.5;
+  }
+  .logout--img {
+    display: none;
+  }
 }

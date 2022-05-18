@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../styles/signIn.css";
+
 import { useNavigate } from "react-router-dom";
 import {
   createUserWithEmailAndPassword,
@@ -18,6 +19,7 @@ import {
 const SignIn = ({ user }) => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
+  const [verifyPassword, setVerifyPassword] = useState("");
   const [registerUsername, setRegisterUsername] = useState("");
   const [signInEmail, setSignInEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
@@ -50,9 +52,11 @@ const SignIn = ({ user }) => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    registerUser();
-    navigate("/");
-    setDisplayForm(false);
+    if (registerPassword === verifyPassword) {
+      registerUser();
+      navigate("/");
+      setDisplayForm(false);
+    } else alert("Passwords do not match");
   };
 
   const submitSignIn = () => {};
@@ -141,6 +145,12 @@ const SignIn = ({ user }) => {
               className="input"
               type="password"
               placeholder="Password..."
+            />
+            <input
+              onChange={(e) => setVerifyPassword(e.target.value)}
+              className="input"
+              type="password"
+              placeholder="Re-enter Password..."
             />
             <button onClick={submitForm} className="input">
               Submit

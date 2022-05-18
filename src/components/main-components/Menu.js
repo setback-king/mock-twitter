@@ -46,7 +46,7 @@ function Menu() {
                 className="fa fa-home"
                 style={{ fontSize: "27px", marginRight: "7px" }}
               ></i>
-              Home
+              <span className="link--text">Home</span>
             </div>
           </Link>
           <Link to="/" className="link--button">
@@ -62,7 +62,7 @@ function Menu() {
                 style={{ width: "27px" }}
                 alt=""
               />
-              Explore
+              <span className="link--text">Explore</span>
             </div>
           </Link>
           <Link to="/notifications" className="link--button">
@@ -74,7 +74,7 @@ function Menu() {
               }}
             >
               <img src="./assets/bell.png" style={{ width: "27px" }} alt="" />
-              Notifications
+              <span className="link--text">Notifications</span>
             </div>
           </Link>
           <Link className="link--button" to="/messages">
@@ -86,7 +86,7 @@ function Menu() {
               }}
             >
               <img src="./assets/email.png" style={{ width: "27px" }} alt="" />
-              Messages
+              <span className="link--text">Messages</span>
             </div>
           </Link>
           <Link to="/" className="link--button">
@@ -102,7 +102,7 @@ function Menu() {
                 style={{ width: "27px" }}
                 alt=""
               />
-              Bookmarks
+              <span className="link--text">Bookmarks</span>
             </div>
           </Link>
           <Link className="link--button" to="/profile">
@@ -114,7 +114,7 @@ function Menu() {
               }}
             >
               <img src="./assets/user.png" style={{ width: "27px" }} alt="" />
-              Profile
+              <span className="link--text">Profile</span>
             </div>
           </Link>
           <button className="tweet--button">Tweet</button>
@@ -122,7 +122,7 @@ function Menu() {
         <div className="bottom--menu">
           <Link to="/" style={{ textDecoration: "none" }}>
             <button onClick={logOut} className="signOut--button">
-              <img src="assets/profile2.png" alt="" />
+              <img src="assets/profile2.png" className="logout--img" alt="" />
               Log Out
             </button>
           </Link>

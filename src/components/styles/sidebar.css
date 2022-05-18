@@ -55,3 +55,21 @@
   border-radius: 1em;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 1150px) {
+  .input-icons {
+    display: none;
+  }
+  .news {
+    display: none;
+  }
+  .sidebar {
+    flex: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+}

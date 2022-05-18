@@ -1,7 +1,7 @@
 .signIn {
   display: flex;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   animation: transitionIn 0.75s;
 }
 
@@ -52,6 +52,7 @@
   background-color: black;
   padding: 65px 40px;
   gap: 0.5%;
+  width: 100%;
 }
 
 button.input {
@@ -104,4 +105,22 @@ h2 span {
 .signIn--button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+@media screen and (max-width: 1350px) {
+  .homeImageDiv {
+    display: none;
+  }
+  .home--signIn {
+    align-items: center;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    height: 100%;
+    padding: 60px 10px 0 0;
+  }
+  .signIn {
+    display: block;
+  }
 }
