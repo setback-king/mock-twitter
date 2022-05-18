@@ -13,17 +13,7 @@ function Menu() {
     <div className="menu">
       <div className="positionContent">
         <div className="top--menu">
-          <Link
-            to="/"
-            className="link--icon"
-            style={{
-              marginTop: "20px",
-              width: "4%",
-              padding: "0",
-              marginLeft: "38%",
-              marginBottom: "20px",
-            }}
-          >
+          <Link to="/" className="link--icon">
             <i
               className="fa fa-twitter"
               style={{

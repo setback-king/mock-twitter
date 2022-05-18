@@ -3,6 +3,6 @@
   color: white;
   display: flex;
   flex-direction: column;
-  flex: 1;
   animation: transitionIn 0.75s;
+  flex: 1;
 }

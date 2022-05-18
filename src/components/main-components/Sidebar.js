@@ -4,9 +4,15 @@ import { NewsItem } from "../build-components/NewsItem";
 
 function Sidebar() {
   const [newsInfo, setNewsInfo] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const search = () => {
-    console.log("gg");
+    const newSearch = encodeURIComponent(searchTerm);
+    fetch(
+      `https://newsdata.io/api/1/news?apikey=${api}&country=us&q=${newSearch}`
+    )
+      .then((response) => response.json())
+      .then((data) => setNewsInfo(data.results));
   };
 
   const api = process.env.REACT_APP_API_KEY;
@@ -40,6 +46,7 @@ function Sidebar() {
         ></i>
         <input
           className="input-field"
+          onChange={(e) => setSearchTerm(e.target.value)}
           type="text"
           placeholder="Search Twitter"
         ></input>

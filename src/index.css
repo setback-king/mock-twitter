@@ -32,10 +32,8 @@ code {
 
 .app {
   display: flex;
-  height: 100vh;
   width: auto;
   max-width: 100%;
-  position: relative;
 }
 
 .profile {
@@ -45,7 +43,12 @@ code {
   animation: transitionIn 0.75s;
   border: 1px solid gray;
   border-bottom: none;
-  height: 100%;
+}
+
+.profileBottom {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .messages {
