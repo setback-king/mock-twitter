@@ -1,16 +1,19 @@
 .newsItem {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 40px;
+  margin-bottom: 2%;
   margin-left: 20px;
   margin-right: 20px;
   font-weight: bold;
+  width: 90%;
 }
 
 .newsInfo {
   display: flex;
   flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .newsImage {
@@ -19,6 +22,7 @@
   margin-bottom: 4%;
   object-fit: cover;
   border-radius: 1em;
+  margin-right: 5%;
 }
 
 .title {

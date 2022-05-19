@@ -97,7 +97,7 @@ const SignIn = ({ user }) => {
           <i className="fa fa-github" style={{ fontSize: "20px" }}></i>
           Sign up with Github
         </button>
-        <h2>
+        <h2 className=".header2">
           <span>or</span>
         </h2>
         <button

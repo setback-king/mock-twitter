@@ -23,11 +23,10 @@ function Sidebar() {
       .then((data) => setNewsInfo(data.results));
   }, []);
 
-  console.log(newsInfo.length);
-
-  const newsElements = newsInfo.map((news) => {
+  const newsElements = newsInfo.map((news, index) => {
     return (
       <NewsItem
+        key={index}
         title={news.title}
         pubDate={news.pubDate}
         image_url={news.image_url}
@@ -52,7 +51,9 @@ function Sidebar() {
         ></input>
       </div>
       <div className="news">
-        <h3 style={{ marginLeft: "15px" }}>What's Happening</h3>
+        <h3 style={{ marginLeft: "10%", fontStyle: "italic" }}>
+          What's Happening
+        </h3>
         {newsElements}
       </div>
     </div>

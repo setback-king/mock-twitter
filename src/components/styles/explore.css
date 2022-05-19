@@ -17,6 +17,14 @@
   margin-top: 20px;
 }
 
-.news--links:hover {
+.categories {
+  padding: 12px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.categories:hover {
   background-color: #383535;
+  cursor: pointer;
 }
