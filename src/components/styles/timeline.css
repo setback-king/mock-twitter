@@ -100,8 +100,7 @@ hr {
     font-size: 15px;
   }
   hr {
-    width: 60%;
-    margin-left: 30%;
+    display: none;
   }
   .timeline--header {
     height: 0px;

@@ -57,7 +57,7 @@ export const Timeline = ({ user }) => {
           tweetField.value = "";
         })
         .then(() => {
-          document.location.reload();
+          window.location.reload();
         });
     } catch (error) {
       console.error("Error writing new message to Firebase Database", error);

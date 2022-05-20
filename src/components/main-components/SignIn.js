@@ -83,7 +83,9 @@ const SignIn = ({ user }) => {
       </div>
       <div className="home--signIn">
         <i className="fa fa-twitter" style={{ fontSize: "47px" }}></i>
-        <h1 style={{ fontSize: "60px" }}>Happening now</h1>
+        <h1 className="happening" style={{ fontSize: "60px" }}>
+          Happening now
+        </h1>
         <h1 style={{ fontSize: "36px", marginBottom: "35px" }}>
           Join Twitter today.
         </h1>
@@ -105,7 +107,10 @@ const SignIn = ({ user }) => {
         >
           Sign up with email
         </button>
-        <span style={{ width: "50%", fontSize: "10px", color: "lightgray" }}>
+        <span
+          className="terms"
+          style={{ width: "70%", fontSize: "10px", color: "lightgray" }}
+        >
           By signing up, you agree to the Terms of Service and Privacy Policy,
           including Cookie Use.
         </span>
@@ -144,11 +149,15 @@ const SignIn = ({ user }) => {
               type="password"
               placeholder="Re-enter Password..."
             />
-            <button onClick={submitForm} className="input">
+            <button
+              onClick={submitForm}
+              style={{ borderRadius: "2em" }}
+              className="input"
+            >
               Submit
             </button>
             <button
-              style={{ backgroundColor: "gray" }}
+              style={{ backgroundColor: "gray", borderRadius: "2em" }}
               onClick={exitForm}
               className="input"
             >
@@ -171,11 +180,15 @@ const SignIn = ({ user }) => {
               type="password"
               placeholder="Password..."
             />
-            <button onClick={signInUser} className="input">
+            <button
+              onClick={signInUser}
+              style={{ borderRadius: "2em" }}
+              className="input"
+            >
               Sign in
             </button>
             <button
-              style={{ backgroundColor: "gray" }}
+              style={{ backgroundColor: "gray", borderRadius: "2em" }}
               onClick={exitForm}
               className="input"
             >
