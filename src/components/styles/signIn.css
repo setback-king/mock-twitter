@@ -111,6 +111,7 @@ h2 span {
   .homeImageDiv {
     display: none;
   }
+
   .home--signIn {
     align-items: center;
     text-align: center;
@@ -123,4 +124,7 @@ h2 span {
   .signIn {
     display: block;
   }
+}
+
+@media screen and (max-width: 550px) {
 }

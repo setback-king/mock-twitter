@@ -57,3 +57,7 @@ code {
   animation: transitionIn 0.75s;
   flex: 1.3;
 }
+
+textarea {
+  resize: none;
+}

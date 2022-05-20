@@ -1,7 +1,14 @@
 import React from "react";
 import "../styles/newsItem.css";
 
-export const NewsItem = ({ title, image_url, category, pubDate }) => {
+export const NewsItem = ({
+  title,
+  image_url,
+  category,
+  pubDate,
+  styles,
+  dates,
+}) => {
   const newPub = pubDate.substr(0, 10);
 
   return (
@@ -17,7 +24,9 @@ export const NewsItem = ({ title, image_url, category, pubDate }) => {
         >
           <span>{category}</span>-<span>{newPub}</span>
         </div>
-        <p className="title">{title}</p>
+        <p style={styles} className="title">
+          {title}
+        </p>
       </div>
       {image_url && <img className="newsImage" src={image_url} alt="" />}
     </div>

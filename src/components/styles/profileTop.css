@@ -92,6 +92,12 @@ nav {
   flex: 1;
 }
 
+.grayspace {
+  width: 100%;
+  background-color: rgb(65, 66, 69);
+  height: 180px;
+}
+
 .buttonlikes {
   background-color: black;
   border: none;
@@ -127,6 +133,21 @@ button {
     display: none;
   }
   .followers {
-    margin-top: 120px;
+    margin-top: 60%;
+  }
+  .header {
+    height: 35px;
+    border-bottom: 1px solid gray;
+  }
+  .grayspace {
+    display: none;
+  }
+  .profilePic {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+  }
+  .profileInfo {
+    align-items: center;
   }
 }

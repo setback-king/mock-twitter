@@ -28,3 +28,9 @@
   background-color: #383535;
   cursor: pointer;
 }
+
+@media screen and (max-width: 550px) {
+  .categories {
+    padding: 0;
+  }
+}

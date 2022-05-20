@@ -29,6 +29,7 @@ function News() {
   const newsElements = categoryNews.map((news, index) => {
     return (
       <NewsItem
+        styles={{ fontSize: "17px" }}
         key={index}
         title={news.title}
         pubDate={news.pubDate}

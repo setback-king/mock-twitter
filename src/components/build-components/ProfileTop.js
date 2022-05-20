@@ -6,11 +6,11 @@ import Likes from "../main-components/Likes";
 import { storage } from "../utils/firebase.config";
 import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
+import { faHourglass3 } from "@fortawesome/free-solid-svg-icons";
 
 export const ProfileTop = ({ user }) => {
   const [displayEditProfile, setDisplayEditProfile] = useState(false);
   const [newImage, setNewImage] = useState(null);
-  const [linkSelected, setLinkSelected] = useState(true);
 
   console.log(newImage);
 
@@ -60,16 +60,10 @@ export const ProfileTop = ({ user }) => {
         <Link to="/">
           <img className="arrow" src="./assets/left-arrow.png" alt="" />
         </Link>
-        Username here
+        <h3>{user.email?.split("@")[0]}</h3>
       </header>
       <div>
-        <div
-          style={{
-            width: "100%",
-            backgroundColor: "rgb(65, 66, 69)",
-            height: "180px",
-          }}
-        ></div>
+        <div className="grayspace"></div>
         <div className="profileInfo">
           <button onClick={editProfile} className="setupProfile">
             Set up profile
@@ -81,17 +75,17 @@ export const ProfileTop = ({ user }) => {
           />
           <div className="followers">
             <p style={{ fontWeight: "bold" }}>
-              30 <span style={{ color: "gray" }}>Followers</span>
+              0 <span style={{ color: "gray" }}>Followers</span>
             </p>
             <p style={{ fontWeight: "bold" }}>
-              35 <span style={{ color: "gray" }}>Following</span>
+              0 <span style={{ color: "gray" }}>Following</span>
             </p>
           </div>
           <nav>
             <Link to="/profile">
               <button
                 onClick={(e) => toggleStyling(e)}
-                className="buttontweet buttonSelected"
+                className="buttontweet selectedButton"
               >
                 Tweets
               </button>
@@ -105,7 +99,10 @@ export const ProfileTop = ({ user }) => {
         </div>
       </div>
       {displayEditProfile && (
-        <div className="signUpForm" style={{ textAlign: "center" }}>
+        <div
+          className="signUpForm"
+          style={{ textAlign: "center", marginTop: "10%" }}
+        >
           <h1 style={{ marginTop: "0" }}>Change Profile Picture</h1>
           <input
             className="input"

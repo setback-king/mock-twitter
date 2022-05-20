@@ -1,11 +1,23 @@
 import React, { useState } from "react";
 import { signOut } from "firebase/auth";
-import { auth } from "../utils/firebase.config.js";
+import {
+  collection,
+  addDoc,
+  serverTimestamp,
+  query,
+  orderBy,
+  onSnapshot,
+  limit,
+  where,
+  getDocs,
+} from "firebase/firestore";
+import { auth, db } from "../utils/firebase.config.js";
 import { Link } from "react-router-dom";
 import "../styles/menu.css";
 
-function Menu() {
+function Menu({ user }) {
   const [createTweet, setCreateTweet] = useState(false);
+  const [publishTweet, setPublishTweet] = useState("");
 
   const logOut = async () => {
     await signOut(auth);
@@ -15,10 +27,37 @@ function Menu() {
     setCreateTweet(true);
   };
 
-  const submitTweet = () => {
+  const submitTweet = (publishTweet) => {
+    setCreateTweet(false);
+    sendTweet(publishTweet).then(() => {
+      document.location.reload();
+    });
+  };
+
+  const cancelTweet = () => {
     setCreateTweet(false);
   };
 
+  const tweetField = document.getElementById("tweet--box");
+
+  async function sendTweet(tweet) {
+    try {
+      await addDoc(collection(db, "tweets"), {
+        name: user.email?.split("@")[0],
+        tweet: publishTweet,
+        timestamp: serverTimestamp(),
+        id: user?.uid,
+      })
+        .then(() => {
+          setPublishTweet("");
+        })
+        .then(() => {
+          tweetField.value = "";
+        });
+    } catch (error) {
+      console.error("Error writing new message to Firebase Database", error);
+    }
+  }
   return (
     <div className="menu">
       <div className="positionContent">
@@ -126,16 +165,26 @@ function Menu() {
               <div className="tweet--input">
                 <textarea
                   className="tweet--input"
-                  maxlength="280"
+                  id="tweet--box"
+                  maxLength="280"
                   type="text"
                   rows="3"
                   placeholder="What's Happening"
+                  onChange={(e) => setPublishTweet(e.target.value)}
                 />
               </div>
             </div>
             <hr />
+
             <button onClick={submitTweet} className="timeline--tweet--btn">
               Tweet
+            </button>
+            <button
+              onClick={cancelTweet}
+              className="timeline--tweet--btn"
+              style={{ backgroundColor: "gray" }}
+            >
+              Delete
             </button>
           </div>
         )}

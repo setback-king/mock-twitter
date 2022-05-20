@@ -155,3 +155,14 @@
     margin-right: 75%;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .menu {
+    flex: 0.2;
+  }
+  .signOut--button {
+    border-radius: none;
+    font-size: 12px;
+    padding: none;
+  }
+}

@@ -7,6 +7,7 @@ import {
   onAuthStateChanged,
   signOut,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 
 import {
@@ -20,7 +21,6 @@ const SignIn = ({ user }) => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
-  const [registerUsername, setRegisterUsername] = useState("");
   const [signInEmail, setSignInEmail] = useState("");
   const [signInPassword, setSignInPassword] = useState("");
   const [displayForm, setDisplayForm] = useState(false);
@@ -58,8 +58,6 @@ const SignIn = ({ user }) => {
       setDisplayForm(false);
     } else alert("Passwords do not match");
   };
-
-  const submitSignIn = () => {};
 
   const exitForm = () => {
     setDisplayForm(false);
@@ -128,12 +126,6 @@ const SignIn = ({ user }) => {
         {displayForm && (
           <div className="signUpForm">
             <h1 style={{ marginTop: "0" }}>Create your account</h1>
-            <input
-              className="input"
-              type="text"
-              placeholder="Name..."
-              onChange={(e) => setRegisterUsername(e.target.value)}
-            />
             <input
               className="input"
               type="email"
