@@ -62,7 +62,7 @@ function Menu({ user }) {
     <div className="menu">
       <div className="positionContent">
         <div className="top--menu">
-          <Link to="/" className="link--icon">
+          <Link to="/mock-twitter" className="link--icon">
             <i
               className="fa fa-twitter"
               style={{
@@ -72,7 +72,7 @@ function Menu({ user }) {
               }}
             ></i>
           </Link>
-          <Link to="/" className="link--button">
+          <Link to="/mock-twitter" className="link--button">
             <div
               style={{
                 display: "flex",
@@ -88,7 +88,7 @@ function Menu({ user }) {
               <span className="link--text">Home</span>
             </div>
           </Link>
-          <Link to="/news" className="link--button">
+          <Link to="/mock-twitter/news" className="link--button">
             <div
               style={{
                 display: "flex",
@@ -104,7 +104,7 @@ function Menu({ user }) {
               <span className="link--text">Explore</span>
             </div>
           </Link>
-          <Link to="/notifications" className="link--button">
+          <Link to="/mock-twitter/notifications" className="link--button">
             <div
               style={{
                 display: "flex",
@@ -116,7 +116,7 @@ function Menu({ user }) {
               <span className="link--text">Notifications</span>
             </div>
           </Link>
-          <Link className="link--button" to="/messages">
+          <Link className="link--button" to="/mock-twitter/messages">
             <div
               style={{
                 display: "flex",
@@ -128,7 +128,7 @@ function Menu({ user }) {
               <span className="link--text">Messages</span>
             </div>
           </Link>
-          <Link className="link--button" to="/profile">
+          <Link className="link--button" to="/mock-twitter/profile">
             <div
               style={{
                 display: "flex",
@@ -145,7 +145,7 @@ function Menu({ user }) {
           </button>
         </div>
         <div className="bottom--menu">
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/mock-twitter" style={{ textDecoration: "none" }}>
             <button onClick={logOut} className="signOut--button">
               <img src="assets/profile2.png" className="logout--img" alt="" />
               Log Out

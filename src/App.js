@@ -30,15 +30,23 @@ function App() {
       <div className="app">
         {user && <Menu user={user} />}
         <Routes>
-          {!user && <Route path="/" element={<SignIn user={user} />} />}
-          <Route path="/" element={<Timeline user={user} />} />
-          <Route path="/profile" element={<Profile user={user} />}>
-            <Route path="likes" element={<Likes />} />
-            <Route path="/profile" element={<UserTweets user={user} />} />
+          {!user && (
+            <Route path="/mock-twitter" element={<SignIn user={user} />} />
+          )}
+          <Route path="/mock-twitter" element={<Timeline user={user} />} />
+          <Route path="/mock-twitter/profile" element={<Profile user={user} />}>
+            <Route path="/mock-twitter/profile/likes" element={<Likes />} />
+            <Route
+              path="/mock-twitter/profile"
+              element={<UserTweets user={user} />}
+            />
           </Route>
-          <Route path="/news" element={<News />} />
-          <Route path="/notifications" element={<Notifications />} />
-          <Route path="/messages" element={<Messages />} />
+          <Route path="/mock-twitter/news" element={<News />} />
+          <Route
+            path="/mock-twitter/notifications"
+            element={<Notifications />}
+          />
+          <Route path="/mock-twitter/messages" element={<Messages />} />
           <Route
             path="*"
             element={
@@ -48,7 +56,6 @@ function App() {
             }
           />
         </Routes>
-
         {user && <Sidebar />}
       </div>
     </Router>

@@ -41,7 +41,7 @@ const SignIn = ({ user }) => {
         signInEmail,
         signInPassword
       );
-      navigate("/");
+      navigate("/mock-twitter");
       setDisplaySignIn(false);
     } catch (error) {
       console.log(error);
@@ -54,7 +54,7 @@ const SignIn = ({ user }) => {
     e.preventDefault();
     if (registerPassword === verifyPassword) {
       registerUser();
-      navigate("/");
+      navigate("/mock-twitter");
       setDisplayForm(false);
     } else alert("Passwords do not match");
   };
@@ -71,7 +71,7 @@ const SignIn = ({ user }) => {
   return (
     <div className="signIn">
       <div className="homeImageDiv">
-        <img className="homeImage" src="assets/twitter.png" alt="" />
+        <img className="homeImage" src="./assets/twitter.png" alt="" />
         <i
           className="fa fa-twitter"
           style={{

@@ -61,3 +61,10 @@ code {
 textarea {
   resize: none;
 }
+
+@media screen and (max-width: 550px) {
+  .app {
+    flex-direction: column;
+    height: 100vh;
+  }
+}

@@ -85,7 +85,11 @@ export const Timeline = ({ user }) => {
             <div className="timeline--image">
               <img
                 className="timeline--pic"
-                src={localStorage.getItem("profilePic")}
+                src={
+                  localStorage.getItem("profilePic")
+                    ? localStorage.getItem("profilePic")
+                    : "./assets/defaultprofile.png"
+                }
                 alt=""
               />
             </div>

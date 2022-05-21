@@ -158,11 +158,50 @@
 
 @media screen and (max-width: 550px) {
   .menu {
-    flex: 0.2;
+    order: 2;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex: 0.1;
+    border-top: 1px solid gray;
+    position: sticky;
+    bottom: 0;
   }
   .signOut--button {
     border-radius: none;
     font-size: 12px;
     padding: none;
+    margin-top: 20%;
+  }
+  .top--menu {
+    flex-direction: row;
+    display: flex;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+  }
+  .positionContent {
+    margin-left: 10px;
+    margin-right: 18px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+  }
+  .link--icon {
+    display: none;
+  }
+  .link--button {
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom--menu {
+    display: flex;
+    flex-direction: row;
+    height: 10px;
+    align-items: center;
+    margin: 0;
   }
 }

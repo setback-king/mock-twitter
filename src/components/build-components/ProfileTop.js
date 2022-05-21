@@ -57,7 +57,7 @@ export const ProfileTop = ({ user }) => {
   return (
     <div className="profileTop">
       <header className="header">
-        <Link to="/">
+        <Link to="/mock-twitter">
           <img className="arrow" src="./assets/left-arrow.png" alt="" />
         </Link>
         <h3>{user.email?.split("@")[0]}</h3>
@@ -82,7 +82,7 @@ export const ProfileTop = ({ user }) => {
             </p>
           </div>
           <nav>
-            <Link to="/profile">
+            <Link to="/mock-twitter/profile">
               <button
                 onClick={(e) => toggleStyling(e)}
                 className="buttontweet selectedButton"
@@ -90,7 +90,7 @@ export const ProfileTop = ({ user }) => {
                 Tweets
               </button>
             </Link>
-            <Link to="likes">
+            <Link to="/mock-twitter/profile/likes">
               <button onClick={(e) => toggleStyling(e)} className="buttonlikes">
                 Likes
               </button>
@@ -112,13 +112,14 @@ export const ProfileTop = ({ user }) => {
             accept="image/png, image/jpeg, image/jpg"
             onChange={(e) => setNewImage(e.target.files[0])}
           />
-          <button onClick={uploadImage} className="input">
+          <button onClick={uploadImage} id="input--btn" className="input">
             Submit Picture
           </button>
           <button
             style={{ backgroundColor: "gray" }}
             onClick={exitForm}
             className="input"
+            id="input--btn"
           >
             Cancel
           </button>

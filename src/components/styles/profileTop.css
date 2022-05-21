@@ -82,7 +82,9 @@ nav {
   flex: 1;
   font-size: 18px;
 }
-
+#input--btn {
+  border-radius: 2em;
+}
 .buttontweet {
   background-color: black;
   border: none;
@@ -129,25 +131,12 @@ button {
 }
 
 @media screen and (max-width: 550px) {
-  .setupProfile {
-    display: none;
+  .signUpForm {
+    z-index: 20;
+    border: none;
   }
-  .followers {
-    margin-top: 60%;
-  }
-  .header {
-    height: 35px;
-    border-bottom: 1px solid gray;
-  }
-  .grayspace {
-    display: none;
-  }
-  .profilePic {
-    width: 100px;
-    height: 100px;
-    margin: 0;
-  }
-  .profileInfo {
-    align-items: center;
+  .profileTop {
+    overflow-y: hidden;
+    overflow-x: hidden;
   }
 }

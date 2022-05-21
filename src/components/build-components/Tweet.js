@@ -11,7 +11,11 @@ export const Tweet = ({ user, name, tweet, id }) => {
       <div>
         <img
           className="tweet--image"
-          src={localStorage.getItem("profilePic")}
+          src={
+            localStorage.getItem("profilePic")
+              ? localStorage.getItem("profilePic")
+              : "./assets/defaultprofile.png"
+          }
           alt=""
         />
       </div>

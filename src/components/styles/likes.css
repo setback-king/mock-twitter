@@ -5,4 +5,5 @@
   flex-direction: column;
   flex: 1;
   animation: transitionIn 0.75s;
+  align-items: center;
 }
