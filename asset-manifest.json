@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/mock-twitter/static/css/main.a4d1785a.css",
-    "main.js": "/mock-twitter/static/js/main.ad436634.js",
+    "main.js": "/mock-twitter/static/js/main.7cefd752.js",
     "static/js/787.586e59eb.chunk.js": "/mock-twitter/static/js/787.586e59eb.chunk.js",
     "static/media/twitter.png": "/mock-twitter/static/media/twitter.ee316e0d2358e67d5ee2.png",
     "index.html": "/mock-twitter/index.html",
     "main.a4d1785a.css.map": "/mock-twitter/static/css/main.a4d1785a.css.map",
-    "main.ad436634.js.map": "/mock-twitter/static/js/main.ad436634.js.map",
+    "main.7cefd752.js.map": "/mock-twitter/static/js/main.7cefd752.js.map",
     "787.586e59eb.chunk.js.map": "/mock-twitter/static/js/787.586e59eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4d1785a.css",
-    "static/js/main.ad436634.js"
+    "static/js/main.7cefd752.js"
   ]
 }
