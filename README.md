@@ -1,6 +1,9 @@
 DEMO HERE -------> https://setback-king.github.io/mock-twitter/
 
 This project is a replica of Twitter. I built this application to practice and implement my React, Firebase, and CSS skills. I wanted to come as close as possible to replicating the real thing. It was fun to practice implementing an authorization login, as well as allowing users to create their own account and sign in. 
+<img width="1650" alt="Screen Shot 2022-07-20 at 11 33 07 AM" src="https://user-images.githubusercontent.com/90795553/180023562-c3948148-1cc9-4a71-9c89-2fc05ad53186.png">
+
+<img width="1653" alt="Screen Shot 2022-07-20 at 11 34 09 AM" src="https://user-images.githubusercontent.com/90795553/180023573-d8355e58-2f2c-45d5-8290-183e15db7e6c.png">
 
 
 # Getting Started with Create React App
